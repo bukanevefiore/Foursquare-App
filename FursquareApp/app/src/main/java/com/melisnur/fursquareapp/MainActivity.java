@@ -2,6 +2,7 @@ package com.melisnur.fursquareapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(MainActivity.this, "User signed up", Toast.LENGTH_SHORT).show();
+
+                    Intent intent=new Intent(getApplicationContext(),LocationsActivity.class);
+                    startActivity(intent);
                 }
             }
         });
@@ -53,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(MainActivity.this, "welcome"+user.getUsername(), Toast.LENGTH_SHORT).show();
+
+                    Intent intent=new Intent(getApplicationContext(),LocationsActivity.class);
+                    startActivity(intent);
                 }
             }
         });

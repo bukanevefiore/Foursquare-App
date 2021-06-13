@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePlaceActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/place_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:hint="place name" />
+
+        <EditText
+            android:id="@+id/place_type"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="place type" />
+
+        <EditText
+            android:id="@+id/place_atmosfer"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="place atmosfer" />
+
+        <ImageView
+            android:onClick="placeImage"
+            android:id="@+id/place_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="next"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:text="Next"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
