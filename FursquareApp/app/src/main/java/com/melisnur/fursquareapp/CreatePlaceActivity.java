@@ -55,6 +55,9 @@ public class CreatePlaceActivity extends AppCompatActivity {
         placesClass.setAtmosfer(placeAtmosfer);
         placesClass.setImage(secilenresim);
 
+        Intent intent=new Intent(getApplicationContext(),MapsActivity.class);
+        startActivity(intent);
+
     }
 
 

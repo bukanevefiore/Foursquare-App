@@ -24,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         sifre_kayitol=findViewById(R.id.sifre_kayitol);
         kullanıcıadi_kayitol=findViewById(R.id.kullanıcıadi_kayitol);
+
+        ParseUser parseUser=ParseUser.getCurrentUser();
+
+        if(parseUser != null){
+            Intent intent=new Intent(getApplicationContext(),LocationsActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void kayitOl(View view){
